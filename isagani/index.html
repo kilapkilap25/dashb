@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <h2>E-Services</h2>
+      </div>
+      <p>Welcome, <strong>Carlo M. Advincula</strong></p>
+    </header>
+    
+    <section class="grid-container">
+      <div class="service healthcare" data-service="healthcare">
+        <img src="healthcare.png" alt="Health Care" />
+        <div class="service-content">
+          <h3>Health Care</h3>
+          <p>Comprehensive health services including preventive care, emergency response, and mental health support.</p>
+          <button>Enter</button>
+        </div>
+      </div>
+
+      <div class="service education" data-service="education">
+        <img src="educ.png" alt="Education" />
+        <div class="service-content">
+          <h3>Education</h3>
+          <p>Empowering minds and sharing futures, this section champions accessible and inclusive education through a wide range of learning programs, academic resources, and developmental opportunities for all age groups.</p>
+          <button>Enter</button>
+        </div>
+      </div>
+
+      <div class="service taxes" data-service="taxes">
+        <img src="tax&permit.png" alt="Taxes and Permits" />
+        <div class="service-content">
+          <h3>Taxes and Permits</h3>
+          <p>Online processing of taxes and permits for individuals and businesses.</p>
+          <button>Enter</button>
+        </div>
+      </div>
+
+      <div class="service government" data-service="government">
+        <img src="goverment.png" alt="Government Assistance and Offers" />
+        <div class="service-content">
+          <h3>Government Assistance and Offers</h3>
+          <p>Support programs and development incentives to enhance economic resilience and well-being.</p>
+          <button>Enter</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Modal for service details -->
+  <div id="serviceModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-body">
+        <!-- Content will be dynamically inserted here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
