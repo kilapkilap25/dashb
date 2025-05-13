@@ -1,0 +1,258 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        body {
+            background-color: white;
+        }
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            background-color: white;
+            min-height: 100vh;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            background-color: white;
+            position: relative;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .header h1 {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .back-button {
+            position: relative;
+            left: 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .back-button:hover {
+            background-color: #f5f5f5;
+        }
+        .profile-section {
+            padding: 20px 16px;
+            border-bottom: 1px solid #eaeaea;
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .profile-info {
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+        }
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            margin-right: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #333;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .profile-details {
+            flex-grow: 1;
+        }
+        .profile-details p {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #666;
+        }
+        .profile-details .name {
+            font-size: 22px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        .options {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+            border-bottom: 1px solid #eaeaea;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            padding: 12px 24px;
+            border-radius: 8px;
+        }
+        .option:hover {
+            background-color: #f5f5f5;
+        }
+        .option-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #3b5998;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .option-text {
+            font-size: 14px;
+            color: #333;
+        }
+        .family-section {
+            padding: 20px 16px;
+            width: 100%;
+        }
+        .family-header {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .family-member {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        .family-pic {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #333;
+            flex-shrink: 0;
+        }
+        .family-details {
+            flex-grow: 1;
+        }
+        .family-details .name {
+            font-size: 18px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .family-details .relation {
+            font-size: 14px;
+            color: #666;
+        }
+        .add-member {
+            width: 100%;
+            padding: 16px;
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .add-member:hover {
+            background-color: #ff5252;
+        }
+        .transactions-section {
+            padding: 20px 16px;
+            width: 100%;
+        }
+        .transaction {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        .transaction-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #e0e0e0;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #333;
+            flex-shrink: 0;
+        }
+        .transaction-details {
+            flex-grow: 1;
+        }
+        .transaction-details .title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .transaction-details .date {
+            font-size: 14px;
+            color: #666;
+        }
+        .transaction-amount {
+            margin-left: auto;
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+        .logout-btn {
+            width: 100%;
+            padding: 18px;
+            background-color: #000;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .logout-btn:hover {
+            background-color: #333;
+        }
+        .qr-section, .id-section {
+            padding: 30px;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+        }
+        .qr-image {
+            width: 300px;
+            height: 300px;
+            margin: 40px 0;
+        }
+        .id-image {
+            width: 90%;
+            max-width: 600px;
+            margin: 40px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }

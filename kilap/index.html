@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Section -->
+        <div id="profilePage">
+            <div class="header">
+                <button class="back-button" onclick="goBack()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <h1>My Profile</h1>
+            </div>
+
+            <div class="profile-section">
+                <div class="profile-info">
+                    <div class="profile-pic">CM</div>
+                    <div class="profile-details">
+                        <p class="name">Carlo M. Advincula</p>
+                        <p>ID No: 0805-2023-0010000</p>
+                        <p>Email: carlo2023@gmail.com</p>
+                        <p>Gender: Male</p>
+                        <p>Birthdate: 12/09/1993</p>
+                        <p>Address: Block 5 Pagong Plaza Street, San Jose, Navotas City, Metro Manila, Philippines, 1485</p>
+                        <p>Status: Verified</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="options">
+                <div class="option" onclick="showQRCode()">
+                    <div class="option-icon">QR</div>
+                    <span class="option-text">My QR</span>
+                </div>
+                <div class="option">
+                    <div class="option-icon">ID</div>
+                    <span class="option-text">My ID</span>
+                </div>
+                <div class="option" onclick="showIDCard()">
+                    <div class="option-icon">+ID</div>
+                    <span class="option-text">Other ID</span>
+                </div>
+            </div>
+
+            <div class="family-section">
+                <h2 class="family-header">Family Members</h2>
+                
+                <div class="family-member">
+                    <div class="family-pic">MC</div>
+                    <div class="family-details">
+                        <p class="name">Mary Cris A. Advincula</p>
+                        <p class="relation">Wife (Head of Household)</p>
+                    </div>
+                </div>
+                
+                <div class="family-member">
+                    <div class="family-pic">AS</div>
+                    <div class="family-details">
+                        <p class="name">Aliyah Sky A. Advincula</p>
+                        <p class="relation">Daughter</p>
+                    </div>
+                </div>
+                
+                <div class="family-member">
+                    <div class="family-pic">CM</div>
+                    <div class="family-details">
+                        <p class="name">Carl Marcus Zane A. Advincula</p>
+                        <p class="relation">Son</p>
+                    </div>
+                </div>
+                
+                <button class="add-member">
+                    Scan QR code to Add Family Member
+                </button>
+            </div>
+
+            <div class="transactions-section">
+                <h2 class="family-header">Transactions</h2>
+                
+                <div class="transaction">
+                    <div class="transaction-icon">💰</div>
+                    <div class="transaction-details">
+                        <p class="title">TUPAD Payout</p>
+                        <p class="date">4 days ago</p>
+                    </div>
+                    <div class="transaction-amount">₱9000</div>
+                </div>
+                
+                <div class="transaction">
+                    <div class="transaction-icon">🏠</div>
+                    <div class="transaction-details">
+                        <p class="title">Property Real Tax Payment</p>
+                        <p class="date">7 days ago</p>
+                    </div>
+                    <div class="transaction-amount">₱490</div>
+                </div>
+            </div>
+
+            <div style="padding: 16px;">
+                <button class="logout-btn">Logout</button>
+            </div>
+        </div>
+
+        <!-- QR Code Section -->
+        <div id="qrPage" class="qr-section">
+            <div class="header">
+                <button class="back-button" onclick="showProfile()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <h1>My QR Code</h1>
+            </div>
+            <img src="QR-code.png" alt="QR Code" class="qr-image">
+            <p>Carlo M. Advincula</p>
+            <p>ID No: 0805-2023-0010000</p>
+        </div>
+
+        <!-- ID Card Section -->
+        <div id="idPage" class="id-section">
+            <div class="header">
+                <button class="back-button" onclick="showProfile()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <h1>Other ID</h1>
+            </div>
+            <img src="ID.webp" alt="ID Card" class="id-image">
+            <p>Republic of the Philippines ID</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
