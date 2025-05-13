@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Main Dashboard -->
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <h2>E-Services</h2>
+      </div>
+      <p>Welcome, <strong>Carlo M. Advincula</strong></p>
+    </header>
+    
+    <section class="grid-container">
+      <div class="service healthcare" data-service="healthcare">
+        <img src="/api/placeholder/400/400" alt="Health Care" />
+        <div class="service-content">
+          <h3>Health Care</h3>
+          <p>Comprehensive health services including preventive care, emergency response, and mental health support.</p>
+          <button>Enter</button>
+        </div>
+      </div>
+
+      <div class="service education" data-service="education">
+        <img src="/api/placeholder/400/400" alt="Education" />
+        <div class="service-content">
+          <h3>Education</h3>
+          <p>Empowering minds and sharing futures, this section champions accessible and inclusive education through a wide range of learning programs, academic resources, and developmental opportunities for all age groups.</p>
+          <button>Enter</button>
+        </div>
+      </div>
+
+      <div class="service taxes" data-service="taxes">
+        <img src="/api/placeholder/400/400" alt="Taxes and Permits" />
+        <div class="service-content">
+          <h3>Taxes and Permits</h3>
+          <p>Online processing of taxes and permits for individuals and businesses.</p>
+          <button>Enter</button>
+        </div>
+      </div>
+
+      <div class="service government" data-service="government">
+        <img src="/api/placeholder/400/400" alt="Government Assistance and Offers" />
+        <div class="service-content">
+          <h3>Government Assistance and Offers</h3>
+          <p>Support programs and development incentives to enhance economic resilience and well-being.</p>
+          <button>Enter</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Modal for service details -->
+  <div id="serviceModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-body">
+        <!-- Content will be dynamically inserted here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Health Services Page -->
+  <div id="healthPage" class="service-page">
+    <div class="page-title">
+      <span class="back-button">&larr;</span>
+      E-Services - Health Services
+    </div>
+    <div class="services-list">
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="/api/placeholder/50/50" alt="PhilHealth" />
+        </div>
+        <div class="service-text">
+          <div class="service-title">PhilHealth</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+
+  <!-- Education Services Page -->
+  <div id="educationPage" class="service-page">
+    <div class="page-title">
+      <span class="back-button">&larr;</span>
+      E-Services - Educ. Info Sites
+    </div>
+    <div class="services-list">
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="/api/placeholder/50/50" alt="DepEd" />
+        </div>
+        <div class="service-text">
+          <div class="service-title">DepEd (Department of Education)</div>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="/api/placeholder/50/50" alt="CHED" />
+        </div>
+        <div class="service-text">
+          <div class="service-title">CHED (Commission on Higher Education)</div>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="/api/placeholder/50/50" alt="TESDA" />
+        </div>
+        <div class="service-text">
+          <div class="service-title">TESDA (Technical Education and Skills Development Authority)</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+
+  <!-- Tax Services Page -->
+  <div id="taxPage" class="service-page">
+    <div class="page-title">
+      <span class="back-button">&larr;</span>
+      E-Services - Tax & Permit Services
+    </div>
+    <div class="services-list">
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="/api/placeholder/50/50" alt="BIR" />
+        </div>
+        <div class="service-text">
+          <div class="service-title">BIR (Bureau of Internal Revenue)</div>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="/api/placeholder/50/50" alt="DTI" />
+        </div>
+        <div class="service-text">
+          <div class="service-title">DTI (Business Name Registration - BNRS Portal)</div>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="/api/placeholder/50/50" alt="SEC" />
+        </div>
+        <div class="service-text">
+          <div class="service-title">SEC (Securities and Exchange Commission) - Services</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+
+  <!-- Tax Appointments Page -->
+  <div id="taxAppointmentsPage" class="service-page">
+    <div class="page-title">
+      <span class="back-button">&larr;</span>
+      E-Services - Tax & Permit Appointments
+    </div>
+    <div class="services-list">
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="/api/placeholder/50/50" alt="SEC" />
+        </div>
+        <div class="service-text">
+          <div class="service-title">SEC (Securities and Exchange Commission) Appointment System (eFast Account Verification)</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+
+  <!-- Government Services Page -->
+  <div id="governmentPage" class="service-page">
+    <div class="page-title">
+      <span class="back-button">&larr;</span>
+      E-Services - Gov. Services
+    </div>
+    <div class="services-list">
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="/api/placeholder/50/50" alt="DOLE" />
+        </div>
+        <div class="service-text">
+          <div class="service-title">DOLE (Department of Labor and Employment)</div>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="/api/placeholder/50/50" alt="POEA" />
+        </div>
+        <div class="service-text">
+          <div class="service-title">Philippine Overseas Employment Administration</div>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="/api/placeholder/50/50" alt="OWWA" />
+        </div>
+        <div class="service-text">
+          <div class="service-title">Overseas Workers Welfare Administration</div>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="/api/placeholder/50/50" alt="DSWD" />
+        </div>
+        <div class="service-text">
+          <div class="service-title">DSWD (Department of Social Welfare and Development)</div>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="/api/placeholder/50/50" alt="LTO" />
+        </div>
+        <div class="service-text">
+          <div class="service-title">Land Transportation Office</div>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="/api/placeholder/50/50" alt="LTFRB" />
+        </div>
+        <div class="service-text">
+          <div class="service-title">LAND TRANSPORTATION FRANCHISING AND REGULATORY BOARD NATIONAL CAPITAL REGION</div>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="/api/placeholder/50/50" alt="DOJ" />
+        </div>
+        <div class="service-text">
+          <div class="service-title">DOJ (Department of Justice)</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
