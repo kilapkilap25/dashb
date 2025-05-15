@@ -1,0 +1,494 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: white;
+  box-shadow: none;
+}
+
+header {
+  background: linear-gradient(to right, #4e9ecf, #61c1b6);
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+section.grid-container {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.service {
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  height: 250px;
+}
+
+.service:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+}
+
+.service img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Center .service-content absolutely over the service box */
+.service-content {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center;     /* Center horizontally */
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.service:hover .service-content {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 3rem; /* Increase padding on hover */
+}
+
+.service-content h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+  text-align: center;
+  align-self: center;
+}
+
+.service:hover .service-content h3 {
+  transform: translateY(-10px);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.service-content p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  transition: opacity 0.3s ease;
+  opacity: 0; /* Hide description by default */
+  max-height: 0;
+  text-align: center; /* Center the text */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service:hover .service-content p {
+  opacity: 1;
+  max-height: 200px; /* Show description on hover */
+}
+.service-content button {
+  background: linear-gradient(to right, #5a34ea, #36c1e1);
+  color: white;
+  border: none;
+  padding: 0.7rem 2.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  align-self: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.3s ease;
+  width: 100%;
+  max-width: 180px;
+  opacity: 0; /* Hide button by default */
+  transform: translateY(20px);
+}
+
+.service-content button:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  background: linear-gradient(to right, #6b45fa, #47d2f2);
+}
+
+.service:hover .service-content button {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Service specific background classes */
+.service.healthcare {
+  background-color: #3498db;
+}
+
+.service.education {
+  background-color: #1abc9c;
+}
+
+.service.taxes {
+  background-color: #9b59b6;
+}
+
+.service.government {
+  background-color: #e74c3c;
+}
+
+/* Active state styling */
+.service.active {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  border: 2px solid #5a34ea;
+}
+
+/* Modal styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 100;
+}
+
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 15px 0;
+}
+
+.service-details h2 {
+  color: #5a34ea;
+  margin-bottom: 15px;
+}
+
+.service-details p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.service-options {
+  margin-top: 20px;
+}
+
+.service-option {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #333;
+}
+
+.service-option:hover {
+  background-color: #f0f0f0;
+  border-color: #5a34ea;
+}
+
+/* Modal Header */
+.modal-header {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+/* Services list in modal */
+.services-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.service-item:hover {
+  background-color: #f9f9f9;
+}
+
+.service-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.service-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.service-text {
+  flex: 1;
+}
+
+.service-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.service-description {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Service pages */
+.service-page {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  overflow-y: auto;
+}
+
+.page-title {
+  background: linear-gradient(to right, #4e9ecf, #61c1b6);
+  color: white;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.back-button {
+  margin-right: 15px;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  background: white;
+  border-top: 1px solid #eee;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-links a {
+  color: #5a34ea;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  section.grid-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding-right: 1rem;
+}
+
+.profilePic {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  display: block;
+  overflow: hidden;         /* ensures circle crop */
+  transition: all 0.5s ease;
+}
+
+.profilePic:hover {
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+:root {
+  --primary: #3498db;
+  --accent: #5a34ea;
+  --secondary: #36c1e1;
+  --dark: #22223b;
+  --light-bg: #f6f8fa;
+  --white: #fff;
+  --text: #22223b;
+  --muted: #6c757d;
+  --border: #e0e0e0;
+  --button-hover: #333;
+}
+
+/* Profile Dropdown Styles */
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 300px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.dropdown-header {
+  display: flex;
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 12px;
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.user-email {
+  font-size: 12px;
+  color: #666;
+  margin-top: 3px;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: var(--border);
+  margin: 0;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+.item-icon {
+  margin-right: 12px;
+  font-size: 16px;
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
+
+.logout-item {
+  color: #d32f2f;
+  font-weight: 500;
+}
+
+.show {
+  display: block;
+}
